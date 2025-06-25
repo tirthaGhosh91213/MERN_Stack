@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursion</title>
+</head>
+<body>
+  <h1>Hey Tirtha</h1>
+  <script>
+    function factorial(n){
+      console.log(`facrotial called for ${n}`)
+      if(n==0){
+        return 1;
+      }
+      return n*factorial(n-1);
+    }
+    console.log(factorial(3))
+    console.log(factorial(6))
+
+  </script>
+</body>
+</html>
