@@ -37,6 +37,7 @@ const RequestHandler =(req, res)=>{
 
    req.on('end',()=>{
     const body = Buffer.concat(arr).toString();
+    console.log(body)
     const urlparams=new URLSearchParams(body);
     const bodyJson ={};
     for (const [key,value] of urlparams.entries()){
