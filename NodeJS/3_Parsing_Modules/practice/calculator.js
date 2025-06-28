@@ -31,7 +31,7 @@ const calHandler = (req, res) => {
         <h1>The sum of the two number is : ${result}</h1>
         <a href="/calculator">Go back to Calculator</a>
         <br>
-        <a href="/">Go to Home</a>
+        <a href="/">Go to Home section</a>
       </body>
       </html>
     `);
