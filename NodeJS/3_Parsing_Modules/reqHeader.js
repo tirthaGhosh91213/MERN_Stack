@@ -31,7 +31,7 @@ const RequestHandler =(req, res)=>{
    console.log("Form data receive ");
    const arr=[]
    req.on('data',(chunk)=>{
-      console.log(chunk)
+      
       arr.push(chunk);
    })
 
@@ -45,8 +45,8 @@ const RequestHandler =(req, res)=>{
     } 
     fs.writeFile('buy.txt',JSON.stringify(bodyJson),()=>{
       res.statusCode=302;
-       res.setHeader('Location','/products');
-      res.end();
+       res.setHeader('Location','/');
+      return res.end();
     });
     
    })
