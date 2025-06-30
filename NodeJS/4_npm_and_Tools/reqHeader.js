@@ -79,7 +79,7 @@ const RequestHandler =(req, res)=>{
     <title>Document</title>
   </head>
   <body>
-    <h1>404 Page not found  </h1>
+    <h1>404 Page not found </h1>
   </body>
   </html>
       `);
