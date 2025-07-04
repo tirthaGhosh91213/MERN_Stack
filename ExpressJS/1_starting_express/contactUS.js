@@ -1,5 +1,10 @@
 const express=require('express')
 const app=express();
+const userContact=require('./userContact')
+const path=require('path')
+
+const homeRouter=require('./homeRouter')
+app.use(express.urlencoded())
 
 // app.use((req,res,next)=>{
 //   console.log("First middleware ",req.url,req.method);
@@ -11,32 +16,20 @@ const app=express();
 //   next();
 // })
 
-// app.use((req,res,next)=>{
-//   console.log("Thaird middleware ",req.url,req.method);
-//   res.send("<h1>Hey Tirtha </h1>")
-// })
 
-app.get("/",(req,res,next)=>{
-  console.log("Another middleware ",req.url,req.method);
-  res.send(`<h1>This is our home page </h1>
-    <a href='/contact-us'>Contact</a>`);
-    
-})
 
-app.get("/contact-us",(req,res,next)=>{
-  console.log("get middleware ",req.url,req.method);
-  res.send(`<h1>This is our contact page </h1>
-    <form action="/contact-us" method="post" >
-  <input type="text " placeholder="Enter Your name" name="name"><br>
-  <input type="email" placeholder="Enter Your email " name="email"><br>
-  <input type="Submit" value="Submit">
-  </form>`);
-    
-})
-app.post("/contact-us",(req,res,next)=>{
-  console.log("POST middleware ",req.url,req.method);
-  res.send(`<h1>Form is submited</h1>`);
-    
+app.use(homeRouter)
+
+app.get(userContact);
+
+
+
+app.use(userContact);
+
+
+app.use((req,res,next)=>{
+  res.statusCode=404;
+  res.sendFile(path.join(__dirname,"views","pageNot.html"))
 })
 
 const PORT=3001;
