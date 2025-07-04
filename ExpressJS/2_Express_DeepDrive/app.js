@@ -47,16 +47,12 @@ app.post("/Buy_Products",(req,res,next)=>{
 
     console.log(JSON.stringify(req.body))
     fs.writeFile('buy.json',JSON.stringify(req.body),()=>{
-      res.statusCode=302;
+       res.statusCode=302;
        res.setHeader('Location','/products');
       res.end();
     });
     
    })
-
-
-
-
 
 app.get("/Products",(req,res,next)=>{
 
