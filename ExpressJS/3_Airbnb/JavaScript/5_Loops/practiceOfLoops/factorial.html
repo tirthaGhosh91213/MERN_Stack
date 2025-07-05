@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>factorial</title>
+</head>
+<body>
+  
+</body>
+<script>
+
+  // Reverse a number
+  function reverseNumber(num){
+    let result =0;
+    for(;num>0;){
+    let rem=num%10;
+    result=result*10+rem;
+    num=  Math.floor(num/10);
+
+    }
+    return result
+  }
+  console.log( reverseNumber(1234));
+
+  // Find prime Number
+
+  function isPrime(num){
+    for(let i=0;i<num;i++){
+      if(num%2===0)
+      return false;
+    }
+    return true;
+  }
+  console.log(isPrime(7))
+
+// Isert a positive number 
+
+function inPutPositiveNum(){
+  let num;
+    do{
+      num= prompt("Enter the positive number :-")
+    }while(num<0);
+    return num;
+}
+let num=inPutPositiveNum();
+console.log(`The positive number is ${num}`)
+
+// Uses of Break statment
+
+for(let i=0;i<=10;i++){
+  if(i===5) break;
+  console.log(i)
+
+  
+}
+
+// Uses of continue statment
+for(let i=0;i<=10;i++){
+  if(i===5) continue;
+  console.log(i)
+}
+
+// Factorial of a nummber 
+function getfactorial(num){
+  let i=1;
+  let result=1;
+  while(i<=num){
+    result*=i;
+    i++;
+  }
+  return result;
+}
+console.log(getfactorial(4));
+
+
+
+</script>
+</html>

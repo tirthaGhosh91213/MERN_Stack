@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>If Alternative </title>
+</head>
+<body>
+  <h1>Hey Tirtha</h1>
+  <script>
+    // Ternary oprator
+    let num=5;
+    let result =n%2==0?'Even':'Odd';
+    console.log(`The number is ${result}`)
+
+    // Guard Oprator
+    let username="0";
+    let fallBackVlue='Friend';
+    let final =`Welcome ${username||fallBackVlue}`
+    console.log(final)
+
+    // default oprator
+    username="0";
+   fallBackVlue='Friend';
+   final =`Welcome ${username||fallBackVlue}`
+    console.log(final)
+  </script>
+</body>
+</html>

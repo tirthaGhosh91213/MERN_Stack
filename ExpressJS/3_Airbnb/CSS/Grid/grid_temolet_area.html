@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .container{
+      display: grid;
+      grid-template-rows: 200px 1fr 100px;
+      grid-template-columns: 300px 1fr 1fr;
+      grid-template-areas: 
+      "side top top"
+      "side main main"
+      "side footer footer";
+      box-sizing: border-box;
+    }
+    .item{
+      background-color: cadetblue;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid black;
+    }
+    .hader{grid-area: top ;
+    background-color: aquamarine;}
+    .aside{grid-area: side;
+    background-color: blueviolet;}
+    .main{grid-area: main;
+    background-color: rgb(45, 149, 241);}
+    .footer{grid-area: footer;
+    background-color: crimson;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item hader">hader</div>
+    <div class="item aside">aside</div>
+    <div class="item main">main</div>
+    <div class="item footer">footer</div>
+  </div>
+</body>
+</html>
