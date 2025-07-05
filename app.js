@@ -10,6 +10,7 @@ const app=express();
 const {hostRouter}=require('./routers/hostRouter');
 const storeRouter=require('./routers/storeRouter');
 
+
 app.use(express.static(path.join(rootDir,"public")))
 app.use(bodyParser.urlencoded())
 
