@@ -21,7 +21,7 @@ app.use(storeRouter);
 
 
 app.use((req,res,next)=>{
-  console.log("This is my first middle ware :- ",req.url,req.method,req.body);
+  console.log("the middleawre is my first middle ware :- ",req.url,req.method,req.body);
   next();
 })
 
