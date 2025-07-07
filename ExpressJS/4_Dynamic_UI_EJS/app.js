@@ -5,18 +5,20 @@ const path = require('path');
 const express = require('express');
 
 //Local Module
-const userRouter = require("./routes/userRouter")
-const {hostRouter} = require("./routes/hostRouter")
-const rootDir = require("./utils/pathUtil");
+const userRouter = require("./routers/storeRouter")
+const {hostRouter} = require("./routers/hostRouter")
+const rootDir = require("./util/path");
 
 const app = express();
+app.use(express.static('public'));
+
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 app.use(express.urlencoded());
 app.use(userRouter);
-app.use("/host", hostRouter);
+app.use(hostRouter);
 
 app.use(express.static(path.join(rootDir, 'public')))
 

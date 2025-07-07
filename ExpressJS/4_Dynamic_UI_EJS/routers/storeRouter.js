@@ -8,7 +8,7 @@ const storeRouter=express.Router();
 
 storeRouter.get("/",(req,res,next)=>{
   console.log(registerHome)
-  res.render('home-page',{ registerHome : registerHome ,pageTitle:`Tirtha's airbnb`});
+  res.render('home-page',{ registerHome : registerHome ,pageTitle:`Tirtha's airbnb`,currentPage: 'home' });
 })
 
 module.exports=storeRouter;
