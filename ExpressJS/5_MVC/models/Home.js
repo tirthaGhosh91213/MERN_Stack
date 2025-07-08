@@ -27,13 +27,8 @@ module.exports= class Home{
   }
   static fetchAll(callback){
     fs.readFile(homeFilePath,(err,data)=>{
-      if(err){
-        callback([]);
-
-      }
-      else{
-        callback(JSON.parse(data));
-      }
+      callback(!err?JSON.parse(data):[])
+     
     })
   }
 }
