@@ -6,9 +6,6 @@ const { error } = require('console');
 const homeFilePath=path.join(rootDir,'data','homes.json');
 
 
-
-
-
 module.exports= class Home{
   constructor(houseName,price,rating,location,photoURL){
     this.houseName=houseName;
