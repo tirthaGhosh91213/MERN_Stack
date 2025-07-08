@@ -3,7 +3,7 @@ const Home = require('../models/Home');
 
 exports.getAddhome=(req,res,next)=>{
 
-  res.render('add-home',{pageTitle:'Add Home here'});
+  res.render('host/add-home',{pageTitle:'Add Home here'});
 
 }
 
@@ -15,6 +15,6 @@ exports.postAddHome=(req,res,next)=>{
   console.log(req.body)
   
   
-  res.render('afterAddHome',{pageTitle:'home added successfully'});
+  res.render('host/afterAddHome',{pageTitle:'home added successfully'});
 
 }

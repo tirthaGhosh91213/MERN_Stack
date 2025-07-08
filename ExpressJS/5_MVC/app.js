@@ -24,10 +24,7 @@ app.use(hostRouter);
 app.use(storeRouter);
 
 
-app.use((req,res,next)=>{
-  console.log("This is my first middle ware :- ",req.url,req.method,req.body);
-  next();
-})
+
 
 app.use(errorController.error404)
 

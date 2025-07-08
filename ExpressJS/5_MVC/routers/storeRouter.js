@@ -1,9 +1,10 @@
-const express=require('express');
+const express = require('express');
+const storeController = require('../controllers/storeControler');
 
-const storeControler =require('../controllers/storeControler')
+const storeRouter = express.Router();
 
-const storeRouter=express.Router();
+// Routes
+storeRouter.get("/", storeController.getAddHome);
+storeRouter.get("/favorite-home", storeController.getFavourite);
 
-storeRouter.get("/",storeControler.getAddHome)
-
-module.exports=storeRouter;
+module.exports = storeRouter;
