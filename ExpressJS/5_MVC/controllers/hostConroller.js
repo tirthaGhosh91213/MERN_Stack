@@ -6,6 +6,11 @@ exports.getAddhome=(req,res,next)=>{
   res.render('host/add-home',{pageTitle:'Add Home here'});
 
 }
+exports.getEdithome=(req,res,next)=>{
+
+  res.render('host/edit-home',{pageTitle:'Add Home here'});
+
+}
 
 exports.postAddHome=(req,res,next)=>{
   const {houseName,price,rating,location,photoURL} =req.body;
@@ -16,5 +21,12 @@ exports.postAddHome=(req,res,next)=>{
   
   
   res.render('host/afterAddHome',{pageTitle:'home added successfully'});
+
+}
+exports.getHosthome=(req,res,next)=>{
+
+  Home.fetchAll(registerHome=>{
+    res.render('host/host-home-page',{ homes : registerHome ,pageTitle:`Host homes `});
+  });
 
 }
