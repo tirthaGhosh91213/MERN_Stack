@@ -4,8 +4,223 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 2rem;
+      border-bottom: 1px solid #ccc;
+    }
+    section h1 {
+      margin-top: 0;
+    }
+    section p {
+      margin: 1rem 0;
+    }
+    section#home {
+      background-color: #f4f4f4;
+    }
+    section#about {
+      background-color: #e2e2e2;
+    }
+
+    section#contact {
+      background-color: #d0d0d0;
+    }
+    section#services {
+      background-color: #c0c0c0;
+    }
+    section#portfolio {
+      background-color: #b0b0b0;
+    }
+    section#home, section#about, section#contact, section#services, section#portfolio {
+      margin: 1rem 0;
+    }
+    section#home h1, section#about h1, section#contact h1, section#services h1, section#portfolio h1 {
+      color: #333;
+    }
+    section#home p, section#about p, section#contact p, section#services p, section#portfolio p {
+      color: #666;
+    }
+    section#home, section#about, section#contact, section#services, section#portfolio {
+      padding: 2rem;
+      border-radius: 5px;
+    }
+    section#home {
+      background-color: #f9f9f9;
+    }
+    section#about {
+      background-color: #f0f0f0;
+    }
+    section#contact {
+      background-color: #e8e8e8;
+    }
+    section#services {
+      background-color: #e0e0e0;
+    }
+    section#portfolio {
+      background-color: #d8d8d8;
+    }
+    section h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    section p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 1rem 0;
+    }
+    nav a {
+      margin: 0 1rem;
+      font-size: 1.2rem;
+    }
+    nav a:hover {
+      color: #ff6347;
+    }
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    section h1 {
+      font-size: 2.5rem;
+      color: #333;
+    }
+    section p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+    body {
+      background-color: #f0f0f0;
+      color: #333;
+      font-family: Arial, sans-serif;
+    }
+    nav {
+      background-color: #007bff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      background-color: #fff;
+      margin: 1rem auto;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    section h1 {
+      font-size: 2rem;
+      color: #333;
+    }
+    section p {
+      font-size: 1rem;
+      color: #666;
+    }
+    section#home {
+      background-color: #e9ecef;
+    }
+    section#about {
+      background-color: #f8f9fa;
+    }
+    section#contact {
+      background-color: #f1f3f5;
+    }
+    section#services {
+      background-color: #f5f6f7;
+    }
+    section#portfolio {
+      background-color: #f8f9fa;
+    }
+    section h1 {
+      margin-top: 0;
+    }
+    section p {
+      margin: 1rem 0;
+    }
+    section#home, section#about, section#contact, section#services, section#portfolio {
+      margin: 1rem 0;
+    }
+    section#home h1, section#about h1, section#contact h1, section#services h1, section#portfolio h1 {
+      color: #333;
+    }
+    section#home p, section#about p, section#contact p, section#services p, section#portfolio p {
+      color: #666;
+    }
+    section#home, section#about, section#contact, section#services, section#portfolio {
+      padding: 2rem;
+      border-radius: 5px;
+    }
+    section#home {
+      background-color: #f9f9f9;
+    }
+    section#about {
+      background-color: #f0f0f0;
+    }
+    section#contact {
+      background-color: #e8e8e8;
+    }
+    section#services {
+      background-color: #e0e0e0;
+    }
+  </style>
 </head>
 <body>
-  <h1></h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+  </nav>
+  <section id="home">
+    <h1>Welcome to Our Website</h1>
+    <p>This is the home section.</p>
+  </section>
+  <section id="about">
+    <h1>About Us</h1>
+    <p>This is the about section.</p>
+  </section>
+  <section id="contact">
+    <h1>Contact Us</h1>
+    <p>This is the contact section.</p>
+  </section>
+  <section id="services">
+    <h1>Our Services</h1>
+    <p>This is the services section.</p>
+  </section>
+  <section id="portfolio">
+    <h1>Our Portfolio</h1>
+    <p>This is the portfolio section.</p>
+  </section>
 </body>
 </html>
