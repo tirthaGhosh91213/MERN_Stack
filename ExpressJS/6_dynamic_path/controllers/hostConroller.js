@@ -69,6 +69,6 @@ exports.postAddHome=(req,res,next)=>{
   console.log(req.body)
   
   
-  res.render('host/afterAddHome',{pageTitle:'home added successfully'});
+  res.render('host/afterAddHome',{pageTitle:'Home added successfully'});
 
 }
